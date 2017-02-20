@@ -2,7 +2,7 @@ import React from 'react';
 import Dropdown from '../../../components/dropdown/dropdown';
 import './chat-message';
 
-const {string, boolean} = React.PropTypes;
+const {string, bool, func} = React.PropTypes;
 
 const ChatMessage = props => {
   return (
@@ -33,7 +33,9 @@ const ChatMessage = props => {
 ChatMessage.propTypes = {
   name: string,
   body: string,
-  isEditing: boolean
+  isEditing: bool,
+  editMessage: func,
+  deleteMessage: func
 };
 
 export default ChatMessage;
