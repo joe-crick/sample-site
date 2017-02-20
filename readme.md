@@ -1,6 +1,7 @@
-Portfolio
+React/MobX Sample Site
 ==================
 
+ - _This is a work in progress_
  - Image goes here
 
 Stuff goes here...
