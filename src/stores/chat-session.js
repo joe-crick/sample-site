@@ -9,12 +9,6 @@ class ChatMessage {
 class ChatSession {
   @observable messages = [];
 
-  @computed get completedTodosCount() {
-    return this.todos.filter(
-      todo => todo.completed === true
-    ).length;
-  }
-
   addMessage(message) {
     this.messages.push({
       message
