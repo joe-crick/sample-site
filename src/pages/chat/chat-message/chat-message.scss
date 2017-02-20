@@ -1,0 +1,7 @@
+.chat-message {
+  .list-group-item:hover {
+    .onclick-menu {
+      visibility: visible;
+    }
+  }
+}

@@ -50,6 +50,7 @@
     "babel-preset-react": "^6.23.0",
     "babel-preset-stage-0": "^6.22.0",
     "babel-tape-runner": "^2.0.1",
+    "cheerio-react": "^1.0.2",
     "colors": "^1.1.2",
     "eslint": "^3.15.0",
     "eslint-loader": "^1.6.1",
