@@ -5,6 +5,29 @@
   "main": "index.js",
   "author": "Joe Crick <joe@josephcrick.com>",
   "license": "MIT",
+  "system": {
+    "transpiler": "babel",
+    "babelOptions": {
+      "blacklist": []
+    }
+  },
+  "scripts": {
+    "clean-public": "npm run remove-public && mkdir public",
+    "remove-public": "node_modules/.bin/rimraf ./public",
+    "build:index": "babel-node build/build-index.js",
+    "build:img": ". build/./copy-images.sh",
+    "build:dev": "webpack -d",
+    "build:pre": "npm-run-all clean-public lint build:index build:img",
+    "build:pre:temp": "npm-run-all clean-public build:index build:img",
+    "build:prod": "babel-node build/build.js",
+    "build": "npm-run-all build:pre:temp build:prod build:index",
+    "webpack:server": "webpack-dev-server --inline",
+    "webpack:debug": "webpack --display-error-details",
+    "dev": "npm-run-all build:dev webpack:server",
+    "lint": "eslint --ext .jsx,.js src/**",
+    "tape-tests": "babel-tape-runner tests/**/*.js | faucet",
+    "test": "npm-run-all tape-tests"
+  },
   "dependencies": {
     "axios": "^0.15.3",
     "data.either": "^1.5.0",
@@ -16,16 +39,18 @@
     "seamless-immutable": "^7.0.1"
   },
   "devDependencies": {
-    "babel": "^6.23.0",
     "babel-core": "^6.23.1",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^6.3.2",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
     "babel-preset-stage-0": "^6.22.0",
     "babel-tape-runner": "^2.0.1",
+    "colors": "^1.1.2",
     "eslint": "^3.15.0",
     "eslint-loader": "^1.6.1",
+    "eslint-plugin-react": "^6.10.0",
     "extend-tape": "^1.2.0",
     "extract-text-webpack-plugin": "2.0.0-rc.3",
     "faucet": "^0.0.1",

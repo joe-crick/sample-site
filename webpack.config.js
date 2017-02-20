@@ -8,7 +8,7 @@ webpackDev.plugins.push(new webpack.HotModuleReplacementPlugin());
 webpackDev.devServer = {
   historyApiFallback: true,
     contentBase: './',
-    outputPath: path.resolve(__dirname, 'dev-build/')
+    // outputPath: path.resolve(__dirname, 'dev-build/')
 };
 
 module.exports = webpackDev;
