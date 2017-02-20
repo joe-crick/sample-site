@@ -2,17 +2,13 @@ Portfolio
 ==================
 
  - Image goes here
- 
-# ![pageres](media/promo.png)
 
 Stuff goes here...
 
-[![build status][1]][2] 
-[![NPM version][3]][4] 
 [![GitHub license](https://img.shields.io/github/license/Day8/re-frame.svg)](license.txt) 
-[![Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)]
+![Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)
 [![GitHub Issues](https://img.shields.io/github/issues/joe-crick/portfolio.svg)](https://github.com/joe-crick/portfolio/issues)
-[![Current Version](https://img.shields.io/badge/version-1.0.7-green.svg)]
+![Current Version](https://img.shields.io/badge/version-1.0.7-green.svg)
 
 # Project Title
 
