@@ -12,8 +12,8 @@ class Chat extends React.Component {
     return (
       <div>
         <ul>
-          {/*{ chatSession.messages.map((message, index) => <Message message={ message }*/}
-                                                                  {/*key={ index }/>) }*/}
+          { chatSession.messages.map((message, index) => <Message message={ message }
+                                                                  key={ index }/>) }
         </ul>
         <button className="btn btn-primary" onClick={ this.onNewMessage }>Send</button>
       </div>

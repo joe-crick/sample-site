@@ -1,20 +1,19 @@
 import {observable} from 'mobx';
 
 class ChatMessage {
-  @observable userId: '';
+  userId: '';
   @observable messageBody: ''
 }
-
 
 class ChatSession {
   @observable messages = [];
 
-  addMessage(message) {
+  addMessage(chatMessage) {
     this.messages.push({
-      message
+      chatMessage
     });
   }
 }
 
-
-const observableTodoStore = new ObservableTodoStore();
+export default new ChatSession();
+export {ChatSession};
