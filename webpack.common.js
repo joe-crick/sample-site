@@ -29,7 +29,7 @@ module.exports = {
         use: [{loader: 'eslint-loader', options: {rules: {semi: 0}}}],
       },
       {
-        test: /\.sass$/,
+        test: /\.scss$/,
         include: /src/,
         use: ExtractTextPlugin.extract({fallback: 'style-loader', use: sassLoaders.join('!')})
       }
@@ -39,6 +39,6 @@ module.exports = {
     new ExtractTextPlugin('[name].css')
   ],
   resolve: {
-    extensions: ['.js', '.jsx', '.sass']
+    extensions: ['.js', '.jsx', '.sdss']
   }
 };

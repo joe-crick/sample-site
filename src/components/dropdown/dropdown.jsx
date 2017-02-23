@@ -1,9 +1,9 @@
 import React from 'react';
-import './dropdown';
+import './dropdown.scss';
 
 const dropdown = props => {
   return (
-    <div tabindex="0" className="onclick-menu">
+    <div tabIndex="0" className="onclick-menu dropdown">
       <ul className="onclick-menu-content">
         {props.children}
       </ul>

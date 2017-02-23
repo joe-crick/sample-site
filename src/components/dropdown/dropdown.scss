@@ -1,5 +1,5 @@
-ccsr-dropdown {
-  .onclick-menu {
+.dropdown {
+  &.onclick-menu {
     position: relative;
     visibility: hidden;
     cursor: pointer;

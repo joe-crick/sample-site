@@ -8,11 +8,11 @@ const ChatMessage = props => {
   return (
     <div className="list-group-item chat-message">
       <div className="pull-left">
-        <h4 className="list-group-item-heading">{props.name}</h4>
+        <h4 className="list-group-item-heading">{props.message.userId}</h4>
         <div>
           {props.isEditing
             ? <input type="text"/>
-            : <p className="list-group-item-text">{props.body}</p>}
+            : <p className="list-group-item-text">{props.message.body}</p>}
         </div>
       </div>
       <div className="item-menu pull-right">

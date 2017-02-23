@@ -31,5 +31,6 @@ module.exports = {
 		"semi": ["error", "always"],
 		"no-unused-vars": ["warn"],
 		"no-console": 0,
+    "react/no-unknown-property": [2, {"ignore": ["tabindex", "class", "for"]}]
 	},
 };
