@@ -1,6 +1,7 @@
 import React from 'react';
 import {observer} from 'mobx-react';
 import Message from './chat-message/chat-message';
+import './chat.scss';
 
 const {object} = React.PropTypes;
 
@@ -11,7 +12,7 @@ class Chat extends React.Component {
     const chatSession = this.props.store;
     return (
       <div>
-        <ul>
+        <ul class="chat-messages">
           { chatSession.messages.map((message, index) => <Message message={ message }
                                                                   key={ index }/>) }
         </ul>
