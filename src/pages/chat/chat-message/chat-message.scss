@@ -1,5 +1,9 @@
-.chat-message:hover {
-  .dropdown {
-    visibility: visible;
+.chat-message {
+  display: flex;
+  justify-content: space-between;
+  &:hover {
+    .dropdown {
+      visibility: visible;
+    }
   }
 }

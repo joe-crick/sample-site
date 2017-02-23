@@ -7,7 +7,7 @@ const {string, bool, func} = React.PropTypes;
 const ChatMessage = props => {
   return (
     <div className="list-group-item chat-message">
-      <div className="pull-left">
+      <div>
         <h4 className="list-group-item-heading">{props.message.userId}</h4>
         <div>
           {props.isEditing
@@ -15,7 +15,7 @@ const ChatMessage = props => {
             : <p className="list-group-item-text">{props.message.body}</p>}
         </div>
       </div>
-      <div className="item-menu pull-right">
+      <div className="item-menu">
         <Dropdown>
           <li>
             <button onClick={props.editMessage}>Edit</button>
@@ -25,7 +25,6 @@ const ChatMessage = props => {
           </li>
         </Dropdown>
       </div>
-      <div className="clearfix"></div>
     </div>
   );
 };
