@@ -1,6 +1,6 @@
 import React from 'react';
 import Dropdown from '../../../components/dropdown/dropdown';
-import './chat-message';
+import './chat-message.scss';
 
 const {string, bool, func} = React.PropTypes;
 
