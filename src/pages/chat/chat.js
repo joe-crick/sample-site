@@ -1,6 +1,10 @@
 import React from 'react';
-import {observer} from 'mobx';
+import {observer} from 'mobx-react';
+import Message from './chat-message/chat-message';
 
+const {object} = React.PropTypes;
+
+// Or in ES6:
 @observer
 class Chat extends React.Component {
   render() {
@@ -8,16 +12,17 @@ class Chat extends React.Component {
     return (
       <div>
         <ul>
-          { chatSession.messages.map(
-            (message, index) => <Message message={ message } key={ index }/>
-          ) }
+          {/*{ chatSession.messages.map((message, index) => <Message message={ message }*/}
+                                                                  {/*key={ index }/>) }*/}
         </ul>
-        <button onClick={ this.onNewMessage }>Send</button>
+        <button className="btn btn-primary" onClick={ this.onNewMessage }>Send</button>
       </div>
     );
   }
-
-  onNewMessage = () => {
-    this.props.store.addMessage(prompt('Enter a new todo:', 'coffee plz'));
-  }
 }
+Chat.propTypes = {
+  store: object,
+};
+
+
+export default Chat;
